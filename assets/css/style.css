@@ -1,0 +1,121 @@
+@font-face {
+    font-family: "Norwester";
+    src: url('../fonts/norwester.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; 
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: "Norwester", sans-serif;
+    height: 100%;
+    color: white;
+    background-color: #000000;
+}
+
+.content {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 34px;
+    padding: 20px 20px 60px 20px;
+}
+
+.quote-box {
+    width: 100%;
+    max-width: 540px;
+    text-align: start;
+}
+
+@keyframes fadeInBlur {
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0);
+
+    }
+}
+
+.quote {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    margin-top: 48px;
+    letter-spacing: 1px;
+    line-height: 42px;
+
+    min-height: 200px;
+    animation: fadeInBlur 0.5s ease-out forwards;
+}
+
+.quote.show {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+.quote-icon {
+    text-align: start;
+}
+
+.quote-icon i {
+    font-size: 64px;
+}
+
+.quoteBorder {
+    display: inline-block;
+    width: 100px;
+    height: 6px;
+    background-color: #fff;
+    margin-top: 100px;
+}
+
+.logo {
+    object-fit: scale-down;
+}
+
+@media screen and (max-width:768px) {
+    .quote {
+        text-align: start;
+        font-size: 1.7rem;
+        min-height: 100px;
+    }
+
+    .quote-icon i {
+        font-size: 54px;
+    }
+
+    .logo {
+        max-width: 115px;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        padding-left: 48px;
+        padding-right: 48px;
+        gap: 24px;
+    }
+
+    .quoteBorder {
+        height: 5px;
+        width: 75px;
+        margin-top: 80px;
+    }
+}
