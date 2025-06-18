@@ -15,7 +15,6 @@
     <link rel="icon" sizes="192x192" href="android-chrome-192x192.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
-
     <link rel="preload" href="assets/fonts/norwester.otf" as="font" type="font/otf" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="assets/css/style.css">
@@ -35,142 +34,9 @@
         </div>
     </div>
 
-    <script>
-        const quotes = [
-            "No one’s coming. It’s on you.",
-            "If you stop showing up, nothing moves.",
-            "Be the reason you don’t fold.",
-            "Make discipline your backup plan.",
-            "The hardest worker always gets found.",
-            "You’re the problem. You’re also the solution.",
-            "One more rep. One more call. One more sale.",
-            "Do it anyway. Especially when it sucks.",
-            "You either do it, or you explain why you didn’t.",
-            "The clock doesn’t care how you feel.",
-            "One brick at a time. Every damn day.",
-            "Winners repeat what worked.",
-            "Stack days. Stack wins.",
-            "The boring stuff builds the empire.",
-            "Show up like your future depends on it — because it does.",
-            "Hard work isn’t loud. It’s just consistent.",
-            "Small efforts, done daily, change your whole life.",
-            "Some people talk. Some people do.",
-            "You don’t need more time — just more focus.",
-            "No shortcuts. Just reps.",
-            "If you want it, prove it.",
-            "Let your work talk so loud you never have to.",
-            "The ones who win aren’t lucky — they’re locked in.",
-            "No plan B. Only plan \"make it happen.\"",
-            "Stop waiting for perfect. Start with pressure.",
-            "Get obsessed. Then stay obsessed.",
-            "Most people quit. That’s your advantage.",
-            "Hustle loud enough to silence the doubt.",
-            "Move like you’re already behind.",
-            "The hunger has to outweigh the comfort.",
-            "Weak moments don’t deserve strong excuses.",
-            "Comfort is the enemy of growth.",
-            "You’ll never feel like it — do it anyway.",
-            "Don’t let your feelings run your future.",
-            "Discipline > Mood",
-            "Pain is proof you’re getting better.",
-            "You’ve survived 100% of your worst days.",
-            "Tough times don’t last. Tough habits do.",
-            "Nobody cares. Work harder.",
-            "Excuses are just delayed regret.",
-            "You become what you tolerate.",
-            "Watch your thoughts — they’re building your reality.",
-            "You attract what you believe you deserve.",
-            "Confidence is built, not gifted.",
-            "Energy is a choice. So is weakness.",
-            "How you talk to yourself matters more than how others do.",
-            "Doubt kills more dreams than failure ever will.",
-            "If it’s not serving your future, let it go.",
-            "Get your mind right, the rest follows.",
-            "Mental reps matter just as much as physical ones.",
-            "Grow or stay average — pick one.",
-            "New level, new mindset.",
-            "You can’t become more by staying the same.",
-            "You are the ceiling and the floor.",
-            "Upgrade your circle, upgrade your life.",
-            "Growth feels like pain first.",
-            "Better habits > better goals.",
-            "Stop fixing the old you. Build the new one.",
-            "Your potential is pissed at your procrastination.",
-            "It’s not about speed. It’s about direction.",
-            "Stay dangerous. Stay disciplined.",
-            "Be so good they think you’re cheating.",
-            "Don’t compete. Dominate.",
-            "Be the reason they doubt themselves.",
-            "Outwork everyone. Especially when no one’s watching.",
-            "Attack the day or the day attacks you.",
-            "Comfort’s a trap. Kill it.",
-            "Kill your excuses. Raise your standards.",
-            "Be quiet. Be consistent. Be unstoppable.",
-            "You don’t need hype. You need hunger.",
-            "Freedom isn’t given. It’s earned in silence.",
-            "Success starts when excuses stop.",
-            "The life you want is built, not found.",
-            "Don’t wish for it. Work for it.",
-            "What you tolerate now becomes your future.",
-            "Everyone wants the lifestyle. Few want the habits.",
-            "Time freedom requires time discipline.",
-            "Legacy is built in the grind, not the glory.",
-            "Chase impact, and income will follow.",
-            "Be the person your future needs you to be.",
-            "Be the reason someone else doesn’t quit.",
-            "If you want respect, lead by example.",
-            "Leaders don’t complain. They solve.",
-            "Show them how it’s done. No words needed.",
-            "You don’t need a title to lead — just action.",
-            "Be the quiet fire that lights up the room.",
-            "Elevate others — that’s real power.",
-            "Lead yourself first. The rest follows.",
-            "Every move you make teaches someone something.",
-            "Influence isn’t built — it’s earned in silence.",
-            "Be the reason you don’t give up.",
-            "Be the reason you finish what you started.",
-            "Be the reason your story changes.",
-            "Be the reason you believe again.",
-            "Be the reason your future gets built.",
-            "Be the reason someone else levels up.",
-            "Be the reason success feels possible.",
-            "Be the reason you earn your freedom.",
-            "Be the reason your past gets silenced.",
-            "Be the reason you wake up hungry.",
-        ];
-
-        function getTodayDateString() {
-            const today = new Date();
-            return today.toISOString().split('T')[0]; // format: "YYYY-MM-DD"
-        }
-
-        function getStoredQuote() {
-            const saved = localStorage.getItem("dailyQuote");
-            if (!saved) return null;
-
-            const { quote, date } = JSON.parse(saved);
-            const today = getTodayDateString();
-
-            return (date === today) ? quote : null;
-        }
-
-        function setNewQuote() {
-            const randomIndex = Math.floor(Math.random() * quotes.length);
-            const newQuote = quotes[randomIndex];
-            const today = getTodayDateString();
-
-            localStorage.setItem("dailyQuote", JSON.stringify({ quote: newQuote, date: today }));
-            return newQuote;
-        }
-
-        window.addEventListener("DOMContentLoaded", () => {
-            const quoteElement = document.getElementById("quote");
-            const existingQuote = getStoredQuote();
-
-            quoteElement.textContent = existingQuote || setNewQuote();
-        });
-    </script>
-
+    <!-- Load quotes first -->
+    <script src="assets/js/quotes.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

@@ -3,7 +3,7 @@
     src: url('../fonts/norwester.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
-    font-display: swap; 
+    font-display: swap;
 }
 
 
@@ -89,6 +89,9 @@ html {
 
 .logo {
     object-fit: scale-down;
+    -webkit-user-drag: none;
+    user-select: none;
+    pointer-events: auto;
 }
 
 @media screen and (max-width:768px) {
