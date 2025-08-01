@@ -24,7 +24,20 @@ function setNewQuote() {
 
 window.addEventListener("DOMContentLoaded", () => {
     const quoteElement = document.getElementById("quote");
-    const existingQuote = getStoredQuote();
 
-    quoteElement.textContent = existingQuote || setNewQuote();
+    // Check if session already saw the quote
+    const sessionSeen = sessionStorage.getItem("quoteShown");
+
+    let quote;
+
+    if (!sessionSeen) {
+        // New tab or visit - generate a new quote
+        quote = setNewQuote();
+        sessionStorage.setItem("quoteShown", "true");
+    } else {
+        // Same tab/session - use stored quote
+        quote = getStoredQuote() || setNewQuote();
+    }
+
+    quoteElement.textContent = quote;
 });
