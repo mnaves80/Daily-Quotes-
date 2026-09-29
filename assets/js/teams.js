@@ -5,11 +5,11 @@ const teamThemes = {
   notredame: {
     bg: "#0a1f44",
     accent: "#f4c542",
-    logo: "logo-notredame.png"
+    logo: "logo-notredame.png.png"
   },
-  premier: {
-    bg: "#7a0019",
-    accent: "#ffffff",
-    logo: ""
+  cmu: {
+    bg: "#6a0032",
+    accent: "#ffc82e",
+    logo: "logo-cmu.png.png"
   }
 };
