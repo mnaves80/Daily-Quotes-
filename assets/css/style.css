@@ -1,3 +1,8 @@
+:root {
+    --bg-color: #000000;
+    --accent-color: #ffffff;
+}
+
 @font-face {
     font-family: "Norwester";
     src: url('../fonts/norwester.otf') format('opentype');
@@ -18,7 +23,7 @@ html {
     font-family: "Norwester", sans-serif;
     height: 100%;
     color: white;
-    background-color: #000000;
+    background-color: var(--bg-color);
 }
 
 .content {
@@ -83,7 +88,7 @@ html {
     display: inline-block;
     width: 100px;
     height: 6px;
-    background-color: #fff;
+    background-color: var(--accent-color);
     margin-top: 100px;
 }
 
