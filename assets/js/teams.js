@@ -11,5 +11,10 @@ const teamThemes = {
     bg: "#6a0032",
     accent: "#ffc82e",
     logo: "logo-cmu.png.png"
+  },
+  lions: {
+    bg: "#0076B6",
+    accent: "#B0B7BC",
+    logo: "logo-lions.png.png"
   }
 };
